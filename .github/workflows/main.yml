@@ -1,0 +1,8 @@
+name: Hello Actions
+on: push
+jobs:
+  build:
+    name: Hello world action
+    runs-on: self-hosted
+    steps:
+      - run: echo "Hello World"

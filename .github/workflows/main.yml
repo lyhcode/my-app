@@ -10,5 +10,6 @@ jobs:
       - run: node --version
       - run: npm --version
       - run: yarn --version
+      - run: yarn install
       - run: yarn test --watchAll=false
       - run: yarn build

@@ -13,7 +13,7 @@ jobs:
       - run: yarn install
       - run: yarn test --watchAll=false
       - run: yarn build
-      - run: rsync -avz -e 'ssh' build/ deploy@${{ secrets.DEPLOY_HOST }}:/home/deploy/my-app
+      - run: rsync -avz -e 'ssh' build/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:

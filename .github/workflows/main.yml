@@ -2,7 +2,7 @@ name: Hello Actions
 on: push
 jobs:
   build:
-    name: Hello world action
+    name: Check Development Tools
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3

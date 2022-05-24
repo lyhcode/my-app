@@ -9,8 +9,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: 'npm'
-          cache-dependency-path: subdir/package-lock.json
       - run: echo "Hello World"
       - run: node --version
       - run: npm --version

@@ -13,3 +13,8 @@ jobs:
       - run: yarn install
       - run: yarn test --watchAll=false
       - run: yarn build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
